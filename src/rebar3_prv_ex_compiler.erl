@@ -53,6 +53,6 @@ format_error(Reason) ->
 
 exc_compile(_Opts, Source, OutDir) ->
     {ok, Binary} = file:read_file(Source),
-    OutFile = filename:join(OutDir, filename:basename(Source)),
+    OutFile = filename:join([OutDir, "priv", filename:basename(Source)]),
     rebar_api:info("Writing out ~s", [OutFile]),
     file:write_file(OutFile, Binary).

@@ -3,6 +3,7 @@
 -export([init/1, do/1, format_error/1]).
 
 -define(PROVIDER, compile).
+-define(NAMESPACE, exc).
 -define(DEPS, [{default, app_discovery}]).
 
 %% ===================================================================
@@ -12,7 +13,7 @@
 init(State) ->
     Provider = providers:create([
             {name, ?PROVIDER},
-            {namespace, exc},
+            {namespace, ?NAMESPACE},
             {module, ?MODULE},
             {bare, true},
             {deps, ?DEPS},

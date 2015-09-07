@@ -1,7 +1,7 @@
 rebar3_ex_compiler
 =====
 
-A rebar plugin
+A rebar3 example plugin for a [tutorial](http://www.rebar3.org/v3.0/docs/custom-compiler-plugins).
 
 Build
 -----
